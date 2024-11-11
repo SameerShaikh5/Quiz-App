@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Container -->
+    <div class="start-container">
+        <h1>Welcome to the Quiz!</h1>
+        <p>Test your knowledge. Click the button below to begin.</p>
+        <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <div class="progress-bar">Progress: <span class="progress"><span id="pro-bar"></span></span> <span id="progress-percent"></span></div>
+            <div class="timer">Time Remaining: <span id="time">00:00</span></div>
+        </div>
+
+        <div class="quiz-box">
+            <h2 id="question">Question</h2>
+            <ul>
+                <li>
+                    <input type="radio" id="optionA" name="options" class="options" value="A">
+                    <label for="optionA" class="optiontextA">Option A</label>
+                </li>
+                <li>
+                    <input type="radio" id="optionB" name="options" class="options" value="B">
+                    <label for="optionB" class="optiontextB">Option B</label>
+                </li>
+                <li>
+                    <input type="radio" id="optionC" name="options" class="options" value="C">
+                    <label for="optionC" class="optiontextC">Option C</label>
+                </li>
+                <li>
+                    <input type="radio" id="optionD" name="options" class="options" value="D">
+                    <label for="optionD" class="optiontextD">Option D</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Next Button -->
+    <div class="next-btn-container">
+        <button class="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Results Container -->
+    <div class="results-container">
+        <h1>Your Results</h1>
+        <p id="result-message">Your score: <span id="score"></span> / 10</p>
+        <p class="appraise"></p>
+        <button class="retry-btn" onclick="retryQuiz()">Retry Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
